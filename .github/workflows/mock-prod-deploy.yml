@@ -1,0 +1,30 @@
+name: Mock Production Deploy
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Generate production site
+        run: |
+          mkdir -p site-dist
+          echo "<h1>Production Site</h1>" > site-dist/index.html
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
+        with:
+          folder: ./site-dist
+          branch: gh-pages
+          clean: true
+          clean-exclude: |
+            pr-preview
+            .well-known
+          force: false
