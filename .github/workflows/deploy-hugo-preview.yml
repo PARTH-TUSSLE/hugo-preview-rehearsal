@@ -162,7 +162,7 @@ jobs:
           header: hugo-pr-preview
           number: ${{ steps.validate.outputs.pr_number }}
           message: |
-            ?? Hugo preview deployment: https://${{ env.PREVIEW_HOST }}/hugo-preview/pr-${{ steps.validate.outputs.pr_number }}/
+            🚀 Hugo preview deployment: https://${{ env.PREVIEW_HOST }}/hugo-preview/pr-${{ steps.validate.outputs.pr_number }}/
             > *Note: Preview may take a moment to be served by GitHub Pages. Please refresh if loading.*
 
       - name: Cleanup Hugo PR preview on close
