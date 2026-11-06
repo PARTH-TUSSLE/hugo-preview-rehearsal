@@ -75,3 +75,4 @@ menus:
     - { name: Community, pageRef: /members, weight: 30 }
     - { name: Handbook, pageRef: /handbook, weight: 40 }
     - { name: Migration, pageRef: /migration, weight: 50 }
+# PR 5 test

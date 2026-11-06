@@ -36,6 +36,12 @@ jobs:
         with:
           egress-policy: audit
 
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+
       - name: Download Artifact
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
@@ -154,7 +160,7 @@ jobs:
           header: hugo-pr-preview
           number: ${{ steps.validate.outputs.pr_number }}
           message: |
-            ?? Hugo preview deployment: https://${{ env.PREVIEW_HOST }}/hugo-preview/pr-${{ steps.validate.outputs.pr_number }}/
+            🚀 Hugo preview deployment: https://${{ env.PREVIEW_HOST }}/hugo-preview/pr-${{ steps.validate.outputs.pr_number }}/
             > *Note: Preview may take a moment to be served by GitHub Pages. Please refresh if loading.*
 
       - name: Cleanup Hugo PR preview on close
