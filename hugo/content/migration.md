@@ -17,3 +17,5 @@ Each widget below is a shortcode that replaces a React component.
 <!-- rehearsal trigger 2 -->
 
 <!-- rehearsal synchronize test 4b -->
+
+<!-- rehearsal trigger 3 for survival test -->
