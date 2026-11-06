@@ -26,5 +26,6 @@ jobs:
           clean: true
           clean-exclude: |
             pr-preview
+            hugo-preview
             .well-known
           force: false
