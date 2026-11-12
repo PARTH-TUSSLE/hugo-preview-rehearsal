@@ -12,4 +12,10 @@ Each widget below is a shortcode that replaces a React component.
 ### Topology
 {{< topology name="meshery" height="300" >}}
 
-<!-- PR 4 -->
+<!-- rehearsal test 1 -->
+
+<!-- rehearsal trigger 2 -->
+
+<!-- rehearsal synchronize test 4b -->
+
+<!-- rehearsal trigger 3 for survival test -->
